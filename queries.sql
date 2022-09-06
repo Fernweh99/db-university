@@ -10,6 +10,10 @@ WHERE cfu > 10;
 
 
 -- 3. Selezionare tutti gli studenti che hanno più di 30 anni
+SELECT *, (YEAR(NOW()) - YEAR(date_of_birth)) AS 'anni'
+FROM `students`
+WHERE (YEAR(NOW()) - YEAR(date_of_birth)) > 30
+ORDER BY anni ASC;
 
 
 -- 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
